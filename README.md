@@ -1,74 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-# Enterprise Resource & Library Management Platform
+# Modular Library & Inventory Management System (Laravel)
 
 ## 📌 Overview
 
-A scalable, enterprise-grade management system designed to streamline library operations, inventory tracking, and user administration within organizations.
+A modular, enterprise-grade management platform designed to handle **library operations, inventory tracking, and user access control** within a unified system.
 
-The platform centralizes multiple operational modules into a unified system, improving efficiency, visibility, and data-driven decision-making.
+This application simulates a real-world internal business tool used by organizations such as **educational institutions, warehouses, and SMEs**, where efficient resource tracking and role-based access are critical.
 
 ---
 
-## 🚀 Key Features
+## 🎯 Key Objectives
 
-### 🔐 User & Role Management
+* Centralize library and inventory operations
+* Reduce manual workflows and data inconsistencies
+* Enable secure, role-based multi-user access
+* Provide real-time visibility into system activities
+
+---
+
+## 🏗️ System Architecture
+
+The system follows a **modular monolithic architecture**, structured for scalability and future microservices migration.
+
+### 🔄 High-Level Flow
+
+```
+User (Admin / Staff)
+        ↓
+Frontend (Blade UI)
+        ↓
+Controllers (Request Handling)
+        ↓
+Service Layer (Business Logic)
+        ↓
+Models / ORM (Eloquent)
+        ↓
+MySQL Database
+```
+
+---
+
+## 🧩 Core Modules
+
+### 🔐 User & Access Management
 
 * Role-Based Access Control (RBAC)
-* User, Role, and Permission management
+* Users, Roles, and Permissions
 * Secure authentication & authorization
+
+---
 
 ### 📚 Library Management
 
-* Book catalog management (Books, Categories, Authors, Publishers)
-* Book issue & return lifecycle
-* Member (Student/User) management
+* Book catalog (Books, Authors, Categories, Publishers)
+* Book issue and return lifecycle
+* Member (student/user) management
+
+---
 
 ### 📦 Inventory Management
 
-* Stock and category management
-* Lost & damaged item tracking
+* Stock and category tracking
+* Lost and damaged item management
 * Purchase request workflow
+
+---
 
 ### 🔄 Circulation System
 
 * Book issue/return tracking
-* Due date and fine handling
-
-### 📊 Reports & Analytics
-
-* Dashboard with real-time statistics
-* Borrowing trends and activity insights
+* Due dates and fine calculation
 
 ---
 
-## 🏗️ Architecture
+### 📊 Dashboard & Reporting
 
-* **Architecture Style:** Modular Monolithic (Microservices-ready)
-* **Pattern:** MVC (Model-View-Controller)
-
-### Tech Stack:
-
-* **Backend:** PHP (Laravel)
-* **Frontend:** Blade, Bootstrap, JavaScript
-* **Database:** MySQL
-* **Version Control:** Git / GitHub
+* Real-time system overview
+* Resource utilization insights
+* Activity tracking
 
 ---
 
-## 🧠 Design Highlights
+## 🧠 Engineering Design Decisions
 
-* Modular structure for scalability and maintainability
-* RBAC implementation for secure multi-user environment
-* Optimized relational database design
-* Clean separation of business logic and presentation layer
+* **Modular Architecture**
+  Each domain (library, inventory, users) is structured independently for maintainability and scalability
+
+* **RBAC Implementation**
+  Fine-grained permission control for multi-role environments
+
+* **Database Design**
+  Normalized relational schema ensuring data integrity and performance
+
+* **Separation of Concerns**
+  Clear division between controllers, business logic, and data layer
+
+---
+
+## 💼 Business Value
+
+* Automates repetitive administrative tasks
+* Improves operational efficiency and accuracy
+* Enhances visibility into resources and usage
+* Supports scalable organizational workflows
+
+---
+
+## 🏢 Real-World Use Cases
+
+* Schools and universities (library + student management)
+* Warehouses and inventory systems
+* Internal enterprise resource management tools
 
 ---
 
@@ -80,18 +121,18 @@ The platform centralizes multiple operational modules into a unified system, imp
 
 ### 👥 User & Role Management
 
-![User Management](screenshots/user-management.png)
-![Role Management](screenshots/role-management.png)
+![Users](screenshots/user-management.png)
+![Roles](screenshots/role-management.png)
 ![Permissions](screenshots/permission-management.png)
 
 ### 📚 Library Management
 
-![Book Management](screenshots/book-management.png)
-![Publisher Management](screenshots/publisher-management.png)
+![Books](screenshots/book-management.png)
+![Publishers](screenshots/publisher-management.png)
 
 ### 👨‍🎓 Member Management
 
-![Member Management](screenshots/member-management.png)
+![Members](screenshots/member-management.png)
 
 ### 📦 Inventory Management
 
@@ -100,19 +141,19 @@ The platform centralizes multiple operational modules into a unified system, imp
 
 ---
 
-## 💼 Business Value
+## ⚙️ Tech Stack
 
-* Automates manual workflows
-* Improves operational efficiency
-* Provides real-time visibility into system data
-* Supports multi-role organizational structure
+* **Backend:** Laravel (PHP)
+* **Frontend:** Blade, Bootstrap, JavaScript
+* **Database:** MySQL
+* **Architecture Pattern:** MVC (Model-View-Controller)
 
 ---
 
-## 📈 Future Enhancements
+## 🚀 Future Enhancements
 
-* Microservices architecture migration
 * REST API for frontend/backend decoupling
+* Microservices-based architecture migration
 * Cloud deployment (AWS / Azure)
 * Advanced analytics and reporting
 
@@ -122,5 +163,4 @@ The platform centralizes multiple operational modules into a unified system, imp
 
 **Manoj Prasad**
 Full Stack Engineer | Backend Specialist
-📍 Based in Japan
-
+📍 Japan
